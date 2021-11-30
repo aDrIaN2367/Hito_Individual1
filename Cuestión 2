@@ -1,0 +1,113 @@
+Algoritmo Ejercicio2
+	//Ejercicio con if / if...else /if...else...if
+	//Te dice si un numero es mayor que otro o si es menor o si su resultado es 20 o si es valido para el propio programa si las condiciones se cumplen de la siguiente manera.
+	Definir num, num2 Como Entero
+	
+	Escribir "---- Bienvenido al 1º Programa ----"
+	Escribir " "
+	
+	Escribir "Dime un numero: "
+	Leer num
+	Escribir "Dime otro número: "
+	Leer num2
+
+	Si num>num2 Entonces
+		Escribir "El número ", num, " es mayor que ", num2, "."
+	FinSi
+	
+	Si num*num2=20 Entonces
+		Escribir "El número ", num, " multiplicado por ", num2, " es 20."
+	Sino 
+		Escribir "Cambia el primer número: "
+		Leer num
+	FinSi
+	
+	Si num=num2 Entonces
+		EScribir "El número ", num, " y el número ", num2, " coinciden."
+	Sino 
+		si num2<>num Entonces
+			Escribir "El número ", num2 " es valido." 			
+		FinSi
+	FinSi
+	//Este segundo programa es un simple formulario de pago, con un selecctor de la forma de pago deseada.
+	Definir seleccion Como Caracter
+	
+	Escribir "---- Bienvenido al 2º programa ----"
+	Escribir " "
+	
+	Escribir "Selecciona un metodo de pago(V,M,P,C): "
+	Leer seleccion
+	
+	Segun seleccion Hacer
+		"V"o"v": Escribir "Has seleccionado el metodo de pago ", Mayusculas("visa.")
+		"M"o"m": Escribir "Has seleccionado el metodo de pago ", Mayusculas( "mastercard.")
+		"P"o"p": Escribir "Has seleccionado el metodo de pago ", Mayusculas("paypal.")
+		"C"o"c": Escribir "Has seleccionado el metodo de pago ", Mayusculas( "contrareembolso.")
+	FinSegun
+	//El tercer programa es una tabla de multiplicar del 0 al 10, o desde el número que tu elijas hasta el 10.
+	Definir n1, n2, n3,x Como Entero
+	
+	Escribir "---- Bienvenido al 3º programa ----"
+	Escribir " "
+	
+	Escribir "Desde que tabla de multiplicar quieres empezar mostrar: "
+	Leer x
+	
+	Para n1<-x hasta 10 con paso 1 Hacer
+		Escribir "La tabla del ", n1
+		Para n2<-1 hasta 10 con paso 1 Hacer
+			n3<-n1*n2
+			Escribir n1, " x ",n2 "=",n3
+		FinPara
+	FinPara
+	
+	
+	Definir numUser, numAdivinar, contador Como Entero
+	//El cuarto programa, es un simple juego de adivinar el número que genera automaticamente el codigo cada vez que inicia y tu tienes que tratar de acertarlo para salir de este.
+	Escribir "---- Bienvenido al 4º programa ----"
+	Escribir " "
+	
+	numAdivinar<-azar(15) 
+	
+	Escribir "Intenta adivinar el número (0 al 15): "
+	Leer numUser
+	
+	contador=0
+	
+	Mientras numUser<>numAdivinar 
+		Escribir "Ese número no es correcto."
+		Escribir " "
+		Escribir "Sigue intentandolo: "
+		Leer numUser
+		contador<-contador+1
+	FinMientras
+	
+	Escribir "Has acertadoel número ", numAdivinar
+	Escribir "Has necesitado ", contador, " intento/s."
+	
+	Definir dato1, dato2, residuo, mcd Como Entero
+	//El quinto porgrama saca el maximo común divisor de los dos números introducidos.
+	Escribir "---- Bienvenido al 5º programa ----"
+	Escribir " "
+
+	Repetir 
+		Escribir "Ingrese numero1: "
+		Leer dato1
+	Hasta Que dato1 > 0
+	
+	Repetir
+		Escribir "Ingrese numero2: "
+		Leer dato2
+	Hasta Que dato2 > 0
+	
+	Repetir
+		residuo <- dato1 % dato2
+		dato1 <- dato2
+		dato2 <- residuo
+	Hasta Que residuo = 0
+	
+	mcd = dato1
+	
+	Escribir "El mcd es: ", mcd
+	
+FinAlgoritmo
