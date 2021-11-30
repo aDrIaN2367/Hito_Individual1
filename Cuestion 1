@@ -1,0 +1,49 @@
+Funcion contar()
+  //Esta función concatena tu nombre y apellido, además te da la bienvenida
+	Definir na Como Cadena
+	Definir nombre, apellido Como Caracter
+	
+	Escribir "Dime tu nombre:"
+	Leer nombre
+	
+	Escribir "Dime tu primer apellido:"
+	Leer apellido
+	
+	na<-nombre+" "+apellido
+	
+	Escribir "Bienvenido ",na
+	Escribir " "
+	Escribir "Tu nombre tiene ",Longitud(nombre), " letras."
+	Escribir "Tu apellido tiene ",Longitud(apellido), " letras."
+	Escribir " "
+	
+FinFuncion
+
+Algoritmo Ejercicio1
+	Definir edad Como Entero
+	Definir banco como logico
+	Definir saldo Como Real
+
+	Escribir "---- Formulario personal ----"
+	Escribir " "
+	
+	contar()
+	
+	Escribir "Dime tu edad:"
+	Leer edad
+	
+	Escribir "Dime si tienes cuenta de banco (verdadero o falso): "
+	Leer banco
+
+	Si banco=Verdadero Entonces
+		Escribir "Dime tu saldo de cuenta:"
+		Leer saldo
+	FinSi
+	
+	Escribir " "
+	Si banco=Verdadero Entonces
+		Escribir "Tu saldo de cuenta es: ", saldo
+	FinSi
+	Escribir "Tu edad es: ", edad
+	
+FinAlgoritmo
