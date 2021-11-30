@@ -1,0 +1,56 @@
+Algoritmo Ejercicio3
+	//Con el array unidimensional podemos crear una lista con la cantidad de campos que queramos utilizar en esta.
+	//Seleccionamos la cantidad de hamburguesas que vamos a tomar y le optorgamos un nombre al número de pedido.
+	Escribir "-----Array unidimensional-----"
+	
+	Definir x, i Como Entero
+	Definir lista, tipo Como Cadena
+	
+	Escribir "Dime la cantidad que vas a pedir de hamburguesas que vas a perdir: "
+	Leer x
+	Dimension lista[x]
+	
+	para i<-0 hasta x-1 con paso 1 hacer
+		Escribir "Dime que tipo de hamburguesa/s vas a tomar: " i
+		Leer tipo
+		lista[i] <- tipo
+	FinPara
+	
+	Escribir "Este es tu pedido:"
+	Para i<-0 hasta x-1 con paso 1 hacer
+		Escribir "Pedido número: ", i
+		Escribir "Has pedido la hamburguesa ", lista[i], "."
+	FinPara
+	
+	
+	//Con el array bidimensional nos da la posibilidad de en este caso añadir una puntuación a nuestras hamburguesas.
+	//Indicamos en el primer campo el número de hamburguesas que hemos pedido y en el segundo otorgamos los puntos por hamburguesa
+	Escribir "-----Array bidimensional-----"
+	
+	Definir z, t, c Como Entero
+	Definir pedido, nombreHamburguesa, puntos Como Cadena
+	
+	Escribir "¿Cuantos pedidos has realizado?"
+	Leer z
+	Dimension pedido[z,2]
+	Para t <- 0 Hasta z - 1 Con Paso 1 Hacer
+		Escribir "Pedido ", t , ":"
+		Escribir "Nombre de la hamburguesa: "
+		Leer nombreHamburguesa
+		Escribir "Dime la puntuación(De 0 a 10, siendo 10 perfecta):"
+		Leer puntos
+		pedido[t, 0] <- nombreHamburguesa
+		pedido[t, 1] <- puntos
+	Fin Para
+	Escribir "-----Tu valoración-----"
+	Escribir "Estas son todas las puntuaciones de tus pedidos:"
+	Para t<-0 Hasta z-1 Con Paso 1 Hacer
+		Escribir Sin Saltar "Pedido número ", t, ": Le has dado a la hamburguesa "
+		Para c<-0 Hasta 1 Con Paso 1 Hacer
+			Escribir Sin Saltar pedido[t, c], " "
+		Fin Para
+		Escribir " puntos."
+	FinPara
+	
+	
+FinAlgoritmo
